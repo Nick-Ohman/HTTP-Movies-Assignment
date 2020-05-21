@@ -13,6 +13,7 @@ const UpdateMovie = props=> {
     const {push} = useHistory();
     const [movie, setMovie] = useState(initialValue);
     const {id} = useParams();
+   
     useEffect(()=>{
         axios.get(`http://localhost:4000/api/movies/${id}`)
         .then(res => {console.log(res.data);
